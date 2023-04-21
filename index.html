@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Multi-step form</title>
+</head>
+
+<body>
+    <div class="main__container">
+        <main class="main">
+            <aside class="main__aside">
+                <div class="aside__item">
+                    <div id="asideNumber1" class="aside__number">1</div>
+                    <div class="aside__steps">
+                        <span class="aside_step">Step 1</span>
+                        <h4 class="aside__title">Your info</h4>
+                    </div>
+                </div>
+
+                <div class="aside__item">
+                    <div id="asideNumber2" class="aside__number">2</div>
+                    <div class="aside__steps">
+                        <span class="aside_step">Step 2</span>
+                        <h4 class="aside__title">Select Plan</h4>
+                    </div>
+                </div>
+
+                <div class="aside__item">
+                    <div id="asideNumber3" class="aside__number">3</div>
+                    <div class="aside__steps">
+                        <span class="aside_step">Step 3</span>
+                        <h4 class="aside__title">Add-ons</h4>
+                    </div>
+                </div>
+
+                <div class="aside__item">
+                    <div id="asideNumber4" class="aside__number">4</div>
+                    <div class="aside__steps">
+                        <span class="aside_step">Step 4</span>
+                        <h4 class="aside__title">Summary</h4>
+                    </div>
+                </div>
+            </aside>
+            <!-- Step 1 -->
+            <div id="step1" class="step1">
+                <h2 class="step__title">Personal info</h2>
+                <span class="hiddenIndicator" id="hiddenIndicator">1</span>
+                <p class="step__paragraph">
+                    Please provide your name, email adress, and phone number.
+                </p>
+                <div class="step1__inputs">
+                    <div class="step1__labels">
+                        <label class="step1__label" for="name__input">Name</label>
+                        <label id="fieldRequiredName" class="step1__fieldRequired" for="name__input">This field is required</label
+              >
+            </div>
+            <input
+              class="step1__input"
+              type="text"
+              name="name__input"
+              placeholder="e.g. Stephen King"
+              autocomplete="off"
+            />
+            <div class="step1__labels">
+              <label class="step1__label" for="email__input"
+                >Email Address</label
+              >
+              <label
+                id="fieldRequiredEmail"
+                class="step1__fieldRequired"
+                for="email__input"
+                >This field is required</label
+              >
+            </div>
+            <input
+              class="step1__input"
+              type="email"
+              name="email__input"
+              placeholder="e.g stephenking@lorem.com"
+              autocomplete="off"
+            />
+            <div class="step1__labels">
+              <label class="step1__label" for="phone__input"
+                >Phone Number</label
+              >
+              <label
+                id="fieldRequiredPhone"
+                class="step1__fieldRequired"
+                for="phone__input"
+                >This field is required</label
+              >
+            </div>
+            <input
+              class="step1__input"
+              type="number"
+              name="phone__input"
+              placeholder="e.g. +1 234 567 890"
+              autocomplete="off"
+            />
+            <div class="step1__btns">
+              <button id="nextButton" class="step__btn">Next Step</button>
+            </div>
+          </div>
+        </div>
+        <!-- End of Step 1 -->
+
+        <!-- Step 2 -->
+
+        <div style="display: none" id="step2" class="step2">
+          <h2 class="step__title">Select your plan</h2>
+          <span class="hiddenIndicator" id="hiddenIndicator">2</span>
+          <p class="step__paragraph">
+            You have the option of monthly or yearly billing.
+          </p>
+          <div class="plan__container">
+            <div id="planItemArcade" class="plan__item">
+              <div class="plan__img">
+                <img src="assets/images/icon-arcade.svg" alt="" />
+              </div>
+              <div id="planTextArcade" class="plan__texts">
+                <h4 class="plan__name">Arcade</h4>
+                <p class="plan__price">$9/mo</p>
+              </div>
+            </div>
+
+            <div id="planItemAdvanced" class="plan__item">
+              <div class="plan__img">
+                <img src="assets/images/icon-advanced.svg" alt="" />
+              </div>
+              <div id="planTextAdvanced" class="plan__texts">
+                <h4 class="plan__name">Advanced</h4>
+                <p class="plan__price">$12/mo</p>
+              </div>
+            </div>
+
+            <div id="planItemPro" class="plan__item">
+              <div class="plan__img">
+                <img src="assets/images/icon-pro.svg" alt="" />
+              </div>
+              <div id="planTextPro" class="plan__texts">
+                <h4 class="plan__name">Pro</h4>
+                <p class="plan__price">$15/mo</p>
+              </div>
+            </div>
+          </div>
+          <div class="monthly__or__yearly">
+            <p id="monthlyText" class="monthly__text">Monthy</p>
+            <div id="selectPlanBtn" class="selectPlanBtn">
+              <div class="selectPlanBtnCircle"></div>
+            </div>
+            <p id="yearlyText" class="yearly__text plan__off">Yearly</p>
+          </div>
+          <div class="step2__btns">
+            <button id="step2BackBtn" class="back__btn">Go Back</button>
+            <input
+              id="nextBtn2"
+              class="step__btn"
+              type="submit"
+              value="Next Step"
+            />
+          </div>
+        </div>
+
+        <!-- End of Step 2 -->
+
+        <!-- Step 3 -->
+        <div style="display: none" id="step3" class="step3">
+          <h2 class="step__title">Pick add-ons</h2>
+          <span class="hiddenIndicator" id="hiddenIndicator">3</span>
+          <p class="step__paragraph">
+            Add-ons help enhance your gaming experience
+          </p>
+
+          <div class="addons__container">
+            <div id="addonsItem1" class="addons__item">
+              <input id="addonsCheck1" class="addons__check" type="checkbox" />
+              <div class="addons__texts">
+                <h4 class="addons__name">Online service</h4>
+                <p class="addons__paragraph">Access to multiplayer games</p>
+              </div>
+              <span id="addonsPrice1" class="addons__price">+$1/mo</span>
+            </div>
+
+            <div id="addonsItem2" class="addons__item">
+              <input id="addonsCheck2" class="addons__check" type="checkbox" />
+              <div class="addons__texts">
+                <h4 class="addons__name">Larger storage</h4>
+                <p class="addons__paragraph">Extra 1TB of cloud save</p>
+              </div>
+              <span id="addonsPrice2" class="addons__price">+$2/mo</span>
+            </div>
+
+            <div id="addonsItem3" class="addons__item">
+              <input id="addonsCheck3" class="addons__check" type="checkbox" />
+              <div class="addons__texts">
+                <h4 class="addons__name">Customizable profile</h4>
+                <p class="addons__paragraph">Custom theme on your profile</p>
+              </div>
+              <span id="addonsPrice3" class="addons__price">+$2/mo</span>
+            </div>
+          </div>
+
+          <div class="step3__btns">
+            <button id="step3BackBtn" class="back__btn">Go Back</button>
+            <input
+              id="nextBtn3"
+              class="step__btn"
+              type="submit"
+              value="Next Step"
+            />
+          </div>
+        </div>
+        <!-- End of Step 3 -->
+
+        <!-- Step 4 -->
+        <div style="display: none" id="step4" class="step3">
+          <h2 class="step__title">Finishing up</h2>
+          <span class="hiddenIndicator" id="hiddenIndicator">3</span>
+          <p class="step__paragraph">
+            Double-check everything looks OK before confirming.
+          </p>
+
+          <div class="confirm__container">
+            <div class="confirm__plan">
+              <div>
+                <h4 id="selectedPlan" class="confirm__plan__text">
+                  Arcade (Monthly)
+                </h4>
+                <p id="confirmChange" class="confirm__change">Change</p>
+              </div>
+              <div>
+                <p id="selectedPrice" class="confirm__price">$9/mo</p>
+              </div>
+            </div>
+
+            <div class="confirm__more">
+              <div class="confirm__item">
+                <div class="confirm__addon__container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="confirm__total">
+            <div>
+              <p id="confirmTotalText" class="confirm__total__text">
+                Total (per month)
+              </p>
+            </div>
+            <div>
+              <h3 id="totalPrice" class="confirm__total__price"></h3>
+            </div>
+          </div>
+
+          <div class="step3__btns">
+            <button id="step4BackBtn" class="back__btn">Go Back</button>
+            <input
+              id="nextBtn4"
+              class="step__btn confirm__btn"
+              type="submit"
+              value="Confirm"
+            />
+          </div>
+        </div>
+        <!-- End of Step 4 -->
+
+        <!-- Thank you Message -->
+
+        <div style="display: none" id="step5" class="step5">
+          <div class="step5__container">
+            <img src="assets/images/icon-thank-you.svg" alt="" />
+            <h2 class="step5__title">Thank you!</h2>
+            <p class="step5__paragraph">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </p>
+          </div>
+        </div>
+
+        <!-- End of Thank you Message -->
+      </main>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
